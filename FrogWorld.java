@@ -46,33 +46,39 @@ public class FrogWorld extends World
         }
         
         //Add another safe Ground zone, y = 270
-        
-        
+         for(int i = 0; i < 14; i++)
+        {
+            addObject( new Ground(), 10 + 60*i, 270);
+        }
         
         //Add the top safe Ground zone, y = 30
-        
-        
-        
+         for(int i = 0; i < 14; i++)
+        {
+            addObject( new Ground(), 10 + 60*i, 30);
+        }
         
     }
     
     public void addCars()
     {
-        //first row of Cars, all y = 450, speed of 5
-        
-        
-        //second row of Cars, all y = 390, speed of 5
-        
-        
-        //third row of Cars, all y = 330, speed of 7
-        
-        
+       
+        addObject ( new Car(5), 10, 450);
+        addObject ( new Car(5), 450, 450);
+        addObject ( new Car(5), 250, 390);
+        addObject ( new Car(5), 650, 390);
+        addObject ( new Car(7), 50, 330);
+        addObject ( new Car(7), 300, 330);
     }
     
     public void addTrucks()
     {
         //first row of Trucks, all y = 210, speed of -8
-
+        addObject ( new Truck(-8), 10, 210);
+        addObject ( new Truck(-8), 450, 210);
+        addObject ( new Truck(-8), 250, 150);
+        addObject ( new Truck (-8), 650, 150);
+        addObject ( new Truck(-10), 50, 90);
+        addObject ( new Truck(-10), 300, 90);
 
 
         //second row of Trucks, all y = 150, speed of -8
